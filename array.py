@@ -33,4 +33,24 @@ def find_second_smallest_int(lst):
         return None
     return second_smallest
 
-print(find_second_smallest_int(lst))
+# print(find_second_smallest_int(lst))
+
+# solving the second smallest int problem through a sorting and searching mechanism 
+
+def bubble_sort(lst): 
+    is_sorted = False
+    indexing_length = len(lst) - 1 
+
+    while not is_sorted: 
+        is_sorted = True 
+
+    for i in range(0, indexing_length):
+        if lst[i] > lst[i+1]:
+            is_sorted = False
+            lst[i], lst[i+1] = lst[i+1], lst[i]
+
+    return lst
+
+sorted_lst = bubble_sort(lst)
+second_smallest = sorted_lst[1]
+print(second_smallest)

@@ -35,4 +35,12 @@ elif len(s) == 0:
 else: 
         print(False)
 
+a = set(["controller"])
+b = set(["control"])
+c = frozenset(["controlling"])
 
+union = b.symmetric_difference(b)
+
+# print(union)
+
+# mutual friend problem ez
